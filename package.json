@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-sender-service",
+  "version": "1.0.0",
+  "description": "WhatsApp Bulk Sender Service using whatsapp-web.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "socket.io": "^4.8.3",
+    "whatsapp-web.js": "github:pedroslopez/whatsapp-web.js"
+  }
+}

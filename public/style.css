@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #25D366; /* WhatsApp Green */
+    --secondary-color: #128C7E;
+    --background-color: #111b21;
+    --surface-color: #202c33;
+    --text-primary: #e9edef;
+    --text-secondary: #8696a0;
+    --input-background: #2a3942;
+    --button-hover: #00a884;
+    --error-color: #f15c6d;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+p.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    background-color: var(--input-background);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    box-sizing: border-box; /* Fix padding issue */
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.status {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    display: none;
+}
+
+.status.success {
+    background-color: rgba(37, 211, 102, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    display: block;
+}
+
+.status.error {
+    background-color: rgba(241, 92, 109, 0.1);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    display: block;
+}
+
+.status.loading {
+    color: var(--text-secondary);
+    display: block;
+}
